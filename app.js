@@ -1,11 +1,15 @@
 // import functions and grab DOM elements
-import { renderIngredient } from './utils.js';
+import { renderIngredient, renderMeal } from './utils.js';
 const form = document.getElementById('add-ingredient');
 const removeButton = document.getElementById('remove-button');
 const ingredientsList = document.getElementById('ingredients-list');
+const saveButton = document.getElementById('save-button');
+const mealInput = document.getElementById('saveMeal');
+const mealsList = document.getElementById('meals-list');
 
 // let state
 let ingredients = [];
+let meals = [];
 
 
 function renderIngredients() {
@@ -17,10 +21,36 @@ function renderIngredients() {
 }
 
 // set event listeners
+
+function renderMeals() {
+    mealsList.textContent = '';
+    for (let meal of meals) {
+        const li = renderMeal(meal);
+        mealsList.append(li);
+    }
+}
+
+saveButton.addEventListener('click', () => {
+    let mealObject = mealInput.value;
+    let totalIngredients = ingredientsList.length;
+
+    meals.push({
+        mealObject,
+        totalIngredients,
+    });
+    resetIngredients();
+    renderMeals();
+});
+
 removeButton.addEventListener('click', () => {
     ingredients.pop();
     renderIngredients();
 });
+
+function resetIngredients() {
+    ingredients = [];
+    ingredientsList.textContent = '';
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
