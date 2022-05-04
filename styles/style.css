@@ -28,7 +28,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: black;
 }
 
 main {
@@ -40,7 +40,6 @@ main {
 }
 
 section {
-    background-color: var(--color5);
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -50,21 +49,50 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(255, 222, 240);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#header {
+    border: 5px solid;
+    border-color: lightpink;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: rgb(135, 255, 135);
+    border-radius: 50px;
+    border-color: pink;
+    width: 160px;
+    font-size: 18px;
+    margin-top: 10%;
+    margin-left: 50%;
+}
+
+.button2:hover {
+    background-color: hotpink;
+    color: black;
+}
+
+label {
+    color: white;
+    font-size: 25px;
 }
 
 .gutter-right {
@@ -78,7 +106,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +116,36 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+ul {
+    color:white;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#left {
+    float: left;
+    position: absolute;
+    top: 27%;
+    left: 18%;
+}
+
+#right {
+    float: right;
+    top: 27%;
+}
+
+#save-button {
+    background-color: rgb(135, 255, 135);
+    border-radius: 50px;
+    border-color: pink;
+    width: 160px;
+    font-size: 18px;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+#mealName {
+    margin-left: 15%;
 }

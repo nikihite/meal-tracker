@@ -13,14 +13,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
+    <header></header>
     <main>
         <div>
-            <h2>Add Ingredients</h2>
+            <h2 id="header">Add Ingredients</h2>
+            <section id="left">
             <form id="add-ingredient">
                 <label>
                     Name:
@@ -33,18 +30,21 @@
                 <label>
                     Measurements:
                     <input type="text" name="measurements" id="measurements"/>
-                    <button id="add-button">Add Ingredient</button>
+                </section>
+            <section id="right">
+                    <button class="button" id="add-button">Add Ingredient</button>
                 </label>
             </form>
             <div class="ingredients-list">
                 <ul id="ingredients-list"></ul>
-                <button id="remove-button">Remove Ingredient</button>
+                <button class="button" id="remove-button">Remove Ingredient</button>
             </div>
+            </section>
         </div>
         <div>
-            <h2>Save Meal</h2>
+            <h2 id="header">Save Meal</h2>
             <label>
-                Meal Name:
+                <span id="mealName">Meal Name:</span>
                 <input type="text" name="Meal" id="saveMeal"/>
                 <button id="save-button">Save Meal</button>
             </label>
