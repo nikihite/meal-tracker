@@ -1,1 +1,10 @@
 /* add home page styles here */
+#add-ingredient {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-button {
+    display: flex;
+    flex-direction: column;
+}
